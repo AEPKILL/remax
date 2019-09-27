@@ -2,13 +2,16 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
-    "lib": ["es2015"],
-    // h5 和小程序环境定义混在一起了，先 skip
-    "skipLibCheck": true,
+    "lib": ["es2015", "dom"],
     "declaration": true,
     "jsx": "react",
     "outDir": "lib"
   },
-  "include": ["src/**/*", "typings/**/*"],
+  "include": [
+    "src/**/*",
+    "typings/**/*",
+    "./node_modules/@remax/mini-types/types/index.d.ts",
+    "./node_modules/@remax/miniprogram-api-typings/index.d.ts"
+  ],
   "exclude": ["__tests__/**/*"]
 }

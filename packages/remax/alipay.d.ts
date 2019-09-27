@@ -1,2 +1,3 @@
-import 'mini-types';
+import '@remax/mini-types';
+
 export * from './lib/adapters/alipay';
